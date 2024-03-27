@@ -60,7 +60,7 @@ p {
     }
 }
 
-/* 链接区域 */
+/* Link链接区域 */
 a {
     text-decoration: none;
 }
@@ -88,3 +88,36 @@ a {
     }
 }
 
+/* Badges标签 */
+
+.badge {
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+
+.badge--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.badge--secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px){
+    .badge--primary {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}
