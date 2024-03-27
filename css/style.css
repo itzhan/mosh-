@@ -5,6 +5,9 @@
     --color-heading:#1b0760;
     --color-body:#918ca4;
 }
+
+/* 字体区域 */
+
 html {
     font-size: 62.5%;
 }
@@ -57,6 +60,31 @@ p {
     }
 }
 
+/* 链接区域 */
+a {
+    text-decoration: none;
+}
 
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
 
+.link-arrow::after {
+    content: "→";
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px){
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+}
 
