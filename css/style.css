@@ -106,7 +106,7 @@ a {
 }
 
 .badge--secondary {
-    background-color: var(--color-secondary);
+    background-color: #02cdf1;
     color: #fff;
 }
 
@@ -303,6 +303,10 @@ a {
     overflow: hidden;
 }
 
+.card--big {
+    height: 47rem;
+}
+
 .card__header, .card__body {
     padding: 2rem 3rem;
 }
@@ -322,6 +326,10 @@ a {
 }
 
 /* Plans订阅计划组件 */
+.plan {
+    transition: transform .2s ease-out;
+}
+
 .plan__name {
     color: #fff;
     margin: 0;
@@ -349,6 +357,10 @@ a {
     margin-top: 0.5em;
 }
 
+.plan__description-white {
+    color: #fff;
+}
+
 .plan--popular .card__header {
     position: relative;
 }
@@ -360,6 +372,22 @@ a {
     position: absolute;
     top: -6px;
     right: 5%;
+}
+
+.plan .btn {
+    margin: 0 4rem 1rem;
+}
+
+.plan--popular {
+    transform: scale(1.1);
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan--popular:hover {
+    transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px){
@@ -462,6 +490,10 @@ a {
 @media screen and (min-width:768px){
     .grid--1x2 {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .grid--1x3 {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -718,4 +750,39 @@ a {
         max-width: 700px;
         margin: 0 auto;
     }
+}
+
+/* Plans Block 区域 */
+.block-plans {
+    gap: 8rem 4rem;
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* feature 组件 */
+.feature__heading {
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.feature__image {
+    width: 100%;
+}
+
+.feature {
+    gap: 4rem 2rem;
+    margin: 12rem 0;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px){
+    .feature:nth-of-type(even) .feature__content{
+        order: 2;  
+    }   
 }
