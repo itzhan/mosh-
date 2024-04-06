@@ -1,3 +1,9 @@
+/* Typography 字体选中区域 */
+::selection {
+    background: var(--color-primary);
+    color: #fff;
+}
+
 :root {
     --color-primary:#2584ff;
     --color-secondary:#00d9ff;
@@ -129,7 +135,6 @@ a {
 .list {
     list-style: none;
     padding-left: 0;
-    color: var(--color-heading);
 }
 
 .list--inline .list__item {
@@ -139,7 +144,8 @@ a {
 
 .list--tick {
     list-style-image: url(../images/tick.svg);
-    padding-left: 3rem;   
+    padding-left: 3rem;
+    color: var(--color-heading); 
 }
 
 .list--tick .list__item {
@@ -614,7 +620,9 @@ a {
     color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
     color: #fff;
 }
 
@@ -624,12 +632,12 @@ a {
 
 .block--skewed-left {
     padding-bottom: calc(var(--padding--vertical) + 4rem);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
 .block--skewed-right {
     padding-bottom: calc(var(--padding--vertical) + 4rem);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 /* container 区域 防止文字拉伸 对排版造成影响 */
@@ -712,10 +720,6 @@ a {
     width: 100%;
 }
 
-.hero {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-}
-
 @media screen and (min-width:768px){
     .hero {
         padding-top: 0;
@@ -786,3 +790,40 @@ a {
         order: 2;  
     }   
 }
+
+/* showcase 展示区块 */
+.block-showcase {
+    gap: 4rem 0;
+}
+
+.block-showcase__media {
+    padding: 0 2.5rem;
+}
+
+.block-showcase__media .media {
+    margin-bottom: 4rem;
+}
+
+.block-showcase__media .media__title {
+    color: #fff;
+}
+
+.block-showcase__image > img{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .block-showcase__image {
+        justify-self: end;
+    }
+
+    .block-showcase__image>img {
+        width: auto;
+        max-width: 700px;
+    }
+}
+
