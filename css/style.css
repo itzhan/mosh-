@@ -215,6 +215,7 @@ a {
 .input-group .input {
     border: 0;
     flex-grow: 1;
+    width: 0;
 }
 
 .input-group .btn {
@@ -229,7 +230,7 @@ a {
 
 /* button按钮区域 */
 .btn {
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     border-radius: 40px;
     border: 0;
     cursor: pointer;
@@ -496,6 +497,10 @@ a {
     display: grid;
 }
 
+.grid--1x5 {
+    padding-left: 1rem;
+}
+
 @media screen and (min-width:768px){
     .grid--1x2 {
         grid-template-columns: 1fr 1fr;
@@ -507,6 +512,12 @@ a {
 
     .grid--1x5 {
         grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .grid--1x3__1024px {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -601,6 +612,14 @@ a {
     overflow: hidden;
     opacity: 0;
     transition: all 0.3s;
+}
+
+.collapsible__item {
+    margin-bottom: 2rem;
+}
+
+.collapsible__content .list{
+    margin-top: 1rem;
 }
 
 .collapsible--expanded .collapsible__chevron{
@@ -748,6 +767,7 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-heading);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 6rem);
@@ -764,6 +784,12 @@ a {
     }
 }
 
+@media screen and (max-width: 360px){
+    .block-domain__prices {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Plans Block 区域 */
 .block-plans {
     gap: 8rem 4rem;
@@ -772,6 +798,13 @@ a {
 .block-plans .card {
     max-width: 500px;
     margin: 0 auto;
+    
+}
+
+@media screen and (max-width: 450px){
+    .block-plans .card {
+        transform: scale(0.95);
+    }
 }
 
 /* feature 组件 */
@@ -846,6 +879,91 @@ a {
         max-width: 41rem;
         height: auto;
         max-height: 46rem;
+    }
+}
+
+/* footer 部分 */
+.footer {
+    background-color: #232323;
+}
+
+.footer a {
+    color: #777;
+    transition: color .2s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer__section {
+    padding: 1rem;
+    border-bottom: 2px solid #393939;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.footer__brand {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer__brand img {
+    width: 100%;
+    max-width: 23rem;
+}
+
+.footer__copyright {
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: .3;
+}
+
+.footer__section .list {
+    margin-top: 0;
+}
+
+.footer__section .list > li {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px){
+    .footer__sections {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer .collapsible__chevron {
+        display: none;
+    }
+
+    .footer .collapsible__content {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand {
+        order: -1;
+        margin-top: 1rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.5rem;
+    }
+
+    .footer__section {
+        border: 0;
+    }
+
+    .footer__heading {
+        font-size: 1.6rem;
+    }
+
+    .footer .collapsible__content {
+        font-size: 1.5rem;
     }
 }
 
